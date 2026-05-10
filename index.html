@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kenangan Kita 🌸 | Romantic Memory</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Background Elements -->
+  <div class="petals-container" id="petalsContainer"></div>
+  <div class="stars" id="stars"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-sub">💕 untuk kamu, yang selalu ada di hati 💕</p>
+      <h1 class="hero-title">Kenangan Kita</h1>
+      <p class="hero-date" id="heroDuration">memuat...</p>
+      <a href="#gallery" class="btn-scroll">
+        <span>Lihat Kenangan</span>
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+      </a>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- ===== LOVE LETTER SECTION ===== -->
+  <section class="letter-section" id="letter">
+    <div class="letter-card">
+      <div class="letter-stamp">💌</div>
+      <p class="letter-salutation">Untuk Kamu yang Terkasih,</p>
+      <div class="letter-body" id="letterBody">
+        <p>Setiap hari bersamamu adalah hadiah yang tak ternilai. Dalam setiap tawa, setiap diam, setiap momen kecil yang kita lewati bersama — aku selalu bersyukur kamu ada di hidupku.</p>
+        <p>Kamu bukan hanya bagian dari ceritaku, kamu <em>adalah</em> cerita terindah yang pernah aku tulis. Terima kasih untuk setiap senyum, setiap pelukan, dan setiap ketulusan yang kau berikan.</p>
+        <p>Aku mencintaimu, hari ini dan selalu. 🌸</p>
+      </div>
+      <p class="letter-sign">— selalu milikmu 🤍</p>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="gallery-section" id="gallery">
+    <h2 class="section-title">📸 Momen Kita</h2>
+      <p class="section-sub">setiap foto menyimpan sejuta cerita indah</p>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+
+      <div class="gallery-add" id="openFormBtn">
+        <div class="add-inner">
+          <span class="add-icon">+</span>
+          <p>Tambah Kenangan Baru</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE SECTION ===== -->
+    <section class="timeline-section" id="timeline">
+      <h2 class="section-title">📅 Perjalanan Kita</h2>
+      <p class="section-sub">mengenang setiap langkah bersama</p>
+      <div class="timeline" id="timelineContainer"></div>
+    </section>
+
+    <!-- ===== LOVE COUNTER ===== -->
+    <section class="counter-section" id="counter">
+      <div class="counter-wrap">
+        <p class="counter-label">❤️ Sudah bersama selama ❤️</p>
+        <div class="counter-boxes" id="counterBoxes"></div>
+        <p class="counter-note">dan setiap detiknya sangat berharga ✨</p>
+      </div>
+    </section>
+
+    <!-- ===== MUSIC PLAYER ===== -->
+    <div class="music-player" id="musicPlayer">
+      <div class="music-disc" id="musicDisc">♫</div>
+      <div class="music-info">
+        <p class="music-title" id="musicTitle">Pilih Lagu</p>
+        <p class="music-artist" id="musicArtist">—</p>
+      </div>
+      <div class="music-controls">
+        <button class="mc-btn" id="prevBtn">⏮</button>
+        <button class="mc-btn mc-play" id="playBtn">▶</button>
+        <button class="mc-btn" id="nextBtn">⏭</button>
+        <button class="mc-btn" id="playlistBtn">📋</button>
+      </div>
+      <div class="music-progress">
+        <span class="time" id="currentTime">0:00</span>
+        <input type="range" class="music-seek" id="seekBar" value="0" min="0" max="100" step="0.1"/>
+        <span class="time" id="duration">0:00</span>
+      </div>
+      <div class="music-volume">
+        <span>🔈</span>
+        <input type="range" id="volumeBar" min="0" max="100" value="50" step="1"/>
+      </div>
+    </div>
+
+    <!-- ===== MODAL FORM ===== -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-box">
+        <button class="modal-close" id="closeModal">&times;</button>
+        <h3 class="modal-title">Tambah Kenangan Baru 🌸</h3>
+        <div id="formContainer"></div>
+      </div>
+    </div>
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+  </body>
+  </html>
